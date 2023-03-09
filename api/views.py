@@ -12,7 +12,7 @@ class ItemList(generics.ListCreateAPIView):
         location = self.request.query_params.get('location')
         if location is not None:
             #fliters itemLocation from models.py
-            queryset = queryset.filter(location=location)
+            queryset = queryset.filter(itemLocation=location)
         return queryset
     
     #create, read, update, delete - CRUD
